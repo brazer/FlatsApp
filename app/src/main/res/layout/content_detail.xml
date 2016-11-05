@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="by.onliner.flatsapp.ui.activity.DetailActivity"
+    tools:showIn="@layout/activity_detail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/detail_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    tools:src="@drawable/home" />
+
+                <TextView
+                    android:id="@+id/detail_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_gravity="right"
+                    android:padding="@dimen/padding_small"
+                    android:background="@drawable/background_rounded_gray_rect"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    tools:text="UP! 2 дня назад"
+                    tools:ignore="RtlHardcoded" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:padding="@dimen/padding_normal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/detail_new_roubles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    tools:text="70 682,92 p."/>
+
+                <TextView
+                    android:id="@+id/detail_dollars_and_old_roubles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    tools:text="37 100 $  706 829 200 p."/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_normal"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:text="1-комнатная квартира"/>
+
+            <TextView
+                android:id="@+id/detail_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_normal"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:text="Собственник"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/detail_address"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_normal"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:text="Минск, улица Шишкина"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/detail_date_added"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_normal"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                tools:text="Размещено 2 дня назад"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

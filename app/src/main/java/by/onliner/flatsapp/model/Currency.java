@@ -4,16 +4,14 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by Admin on 03.11.2016.
+ * Created by Admin on 05.11.2016.
  */
 
-public class Price implements Parcelable {
+public class Currency implements Parcelable {
 
     private String amount;
 
     private String currency;
-
-    private Converted converted;
 
     public String getAmount() {
         return amount;
@@ -21,10 +19,6 @@ public class Price implements Parcelable {
 
     public String getCurrency() {
         return currency;
-    }
-
-    public Converted getConverted() {
-        return converted;
     }
 
     @Override
@@ -36,27 +30,25 @@ public class Price implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.amount);
         dest.writeString(this.currency);
-        dest.writeParcelable(this.converted, flags);
     }
 
-    public Price() {
+    public Currency() {
     }
 
-    protected Price(Parcel in) {
+    protected Currency(Parcel in) {
         this.amount = in.readString();
         this.currency = in.readString();
-        this.converted = in.readParcelable(Converted.class.getClassLoader());
     }
 
-    public static final Parcelable.Creator<Price> CREATOR = new Parcelable.Creator<Price>() {
+    public static final Creator<Currency> CREATOR = new Creator<Currency>() {
         @Override
-        public Price createFromParcel(Parcel source) {
-            return new Price(source);
+        public Currency createFromParcel(Parcel source) {
+            return new Currency(source);
         }
 
         @Override
-        public Price[] newArray(int size) {
-            return new Price[size];
+        public Currency[] newArray(int size) {
+            return new Currency[size];
         }
     };
 }

@@ -18,27 +18,11 @@ import retrofit.client.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Apartment> mApartments;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //API.getInstance().getService().getApartments(1, new FlatsResponse());
         FragmentUtils.replaceContent(this, R.id.content_main, new FlatsFragment(), FlatsFragment.TAG);
-    }
-
-    private class FlatsResponse implements Callback<ApartmentsResponse> {
-
-        @Override
-        public void success(ApartmentsResponse apartmentsResponse, Response response) {
-            mApartments = apartmentsResponse.getApartments();
-        }
-
-        @Override
-        public void failure(RetrofitError error) {
-            Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
-        }
     }
 
 }
