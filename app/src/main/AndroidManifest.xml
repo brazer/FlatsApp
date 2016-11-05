@@ -7,11 +7,13 @@
     <application
         android:name=".FlatsApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_account_balance_white_24dp"
         android:label="@string/app_name"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.MainActivity">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/real_estate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

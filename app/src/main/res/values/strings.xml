@@ -9,7 +9,7 @@
     <string name="four_room">Четырехкомнатная</string>
     <string name="five_room">Пятикомнатная</string>
     <string name="n_room">%1$s-комнатная</string>
-    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_detail">Недвижимость</string>
     <string name="zero_days">Недавно</string>
     <string name="one_days">День назад</string>
     <string name="two_four_days">%1$d дня назад</string>
@@ -19,4 +19,5 @@
     <string name="up">UP!</string>
     <string name="published">Размещено</string>
     <string name="more_month">Больше месяца назад</string>
+    <string name="real_estate">Недвижимость</string>
 </resources>
