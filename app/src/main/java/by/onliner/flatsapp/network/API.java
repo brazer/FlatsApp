@@ -1,7 +1,5 @@
 package by.onliner.flatsapp.network;
 
-import android.text.TextUtils;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.squareup.okhttp.OkHttpClient;

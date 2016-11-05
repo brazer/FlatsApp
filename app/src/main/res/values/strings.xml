@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FlatsApp</string>
+    <string name="dollars_and_old_roubles">%1$s $ %2$s р.</string>
+    <string name="new_roubles">%1$s р.</string>
+    <string name="room">Комната</string>
+    <string name="one_room">Однокомнатная</string>
+    <string name="two_room">Двухкомнатная</string>
+    <string name="three_room">Трехкомнатная</string>
+    <string name="four_room">Четырехкомнатная</string>
+    <string name="five_room">Пятикомнатная</string>
+    <string name="n_room">%1$s-комнатная</string>
 </resources>
