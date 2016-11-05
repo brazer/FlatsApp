@@ -1,10 +1,15 @@
 package by.onliner.flatsapp.ui.activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -90,6 +95,31 @@ public class DetailActivity extends AppCompatActivity {
         String published = getResources().getString(R.string.published) + " " +
                 DateUtil.getTerm(publishingDate, getResources()).toLowerCase();
         mDatePublishTv.setText(published);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.detail_map, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.map) {
+            double posLat = mApartment.getLocation().getLatitude();
+            double posLong = mApartment.getLocation().getLongitude();
+            Uri geoLocation = Uri.parse("geo:" + posLat + "," + posLong);
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(geoLocation);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            } else {
+                Log.d("DetailActivity", "Couldn't call " + geoLocation.toString() + ", no receiving apps installed!");
+            }
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
